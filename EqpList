@@ -1,0 +1,57 @@
+package EqpList;
+ 
+import java.io.*;
+ 
+public class Eqp {
+private String nameEqp;
+private ListEqp[] list_eqp;
+public Eqp () {
+}
+public void setNameEqp(String nameEqp){
+this.nameEqp=nameEqp;
+}
+class ListEqp {
+private String names;
+private String marks;
+private int numbers;
+public ListEqp (String names, String marks, int numbers) {
+this.names = names;
+this.marks = marks;
+this.numbers = numbers;
+}
+public String getNames(){
+return this.names;
+}
+public String getMarks(){
+return this.marks;
+}
+public int getNumbers(){
+return this.numbers;
+}
+}
+public void setList() {
+Scanner sc = new Scanner(System.in);
+System.out.println("Введите количество товаров:");
+int k = sc.nextInt();
+list_eqp = new ListEqp[k];
+for (int i = 0; i < list_eqp.length; i++) {
+System.out.println("Наименование "+(i+1)+"-го товара: ");
+String names=sc.nextLine();
+names=sc.nextLine();
+System.out.println("Какая марка товара?");
+String marks=sc.nextLine();
+System.out.println("Серийный номер товара:");
+int numbers=sc.nextInt();
+list_sklad[i]=new ListSklad(names,marks,numbers);
+}
+}
+
+catch (IOException e){
+e.printStackTrace();
+}
+System.out.println("Выполнено успешно.");
+}
+if(list_sklad.length==0)
+System.out.println("Ошибка!!! Попробуйте начать сначала!!!");
+}
+}
